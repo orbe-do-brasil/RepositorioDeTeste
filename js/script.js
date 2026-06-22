@@ -3,7 +3,7 @@ const container = document.getElementById('carousel');
 function scrollCarousel(direction) {
   if (!container) return;
 
-  const scrollAmount = 430; 
+  const scrollAmount = 460; 
   
   
   const maxScrollLeft = container.scrollWidth - container.clientWidth;

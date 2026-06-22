@@ -5,11 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Site</title>
-
+    <link rel="icon" type="image/png" href="assets/palmeirinha.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2=family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/style.css" />
 </head>
 
@@ -17,27 +16,33 @@
     <header>
         <div class="header-div">
             <h1 class="header-text title">
-                { Título do site }
+                { Meu Site }
             </h1>
         </div>
     </header>
 
-    <section>
+    <section class="section-one">
         <div class="carousel-wrapper">
             <button class="nav-btn prev-btn" onclick="scrollCarousel(-1)">&#10094;</button>
             <div class="scroll-container" id="carousel">
-                <div class="scroll-item">Item Um</div>
-                <div class="scroll-item">Item Dois</div>
-                <div class="scroll-item">Item Três</div>
-                <div class="scroll-item">Item Quatro</div>
-                <div class="scroll-item">Item Cinco</div>
-                <div class="scroll-item">Item Seis</div>
-                <div class="scroll-item">Item Sete</div>
-                <div class="scroll-item">Item Oito</div>
-                <div class="scroll-item">Item Nove</div>
-                <div class="scroll-item">Item Dez</div>
-                <div class="scroll-item">Item Onze</div>
-                <div class="scroll-item">Item Doze</div>
+                <button class="scroll-item"><img src="assets/praia.avif" alt="Ícone Um" class="carousel-icon">
+                <span class="carousel-text">Ícone Um</span></button>
+                <button class="scroll-item"><img src="assets/praia.avif" alt="Ícone Dois" class="carousel-icon">
+                <span class="carousel-text">Ícone Dois</span></button>
+                <button class="scroll-item"><img src="assets/praia.avif" alt="Ícone Três" class="carousel-icon">
+                <span class="carousel-text">Ícone Três</span></button>
+                <button class="scroll-item"><img src="assets/praia.avif" alt="Ícone Quatro" class="carousel-icon">
+                <span class="carousel-text">Ícone Quatro</span></button>
+                <button class="scroll-item"><img src="assets/praia.avif" alt="Ícone Cinco" class="carousel-icon">
+                <span class="carousel-text">Ícone Cinco</span></button>
+                <button class="scroll-item"><img src="assets/praia.avif" alt="Ícone Seis" class="carousel-icon">
+                <span class="carousel-text">Ícone Seis</span></button>
+                <button class="scroll-item"><img src="assets/praia.avif" alt="Ícone Sete" class="carousel-icon">
+                <span class="carousel-text">Ícone Sete</span></button>
+                <button class="scroll-item"><img src="assets/praia.avif" alt="Ícone Oito" class="carousel-icon">
+                <span class="carousel-text">Ícone Oito</span></button>
+                <button class="scroll-item"><img src="assets/praia.avif" alt="Ícone Nove" class="carousel-icon">
+                <span class="carousel-text">Ícone Nove</span></button>
             </div>
             <button class="nav-btn next-btn" onclick="scrollCarousel(1)">&#10095;</button>
         </div>
@@ -45,14 +50,14 @@
 
     <section class="section-two">
         <div>
-            <h1 class="title-two">Conteúdo do site</h1>
+            <h1 class="title-two">Sobre mim!</h1>
             
             <p class="text">
-                Texto extremamente longo para fazer parecer que algo muito importante e inteligente está sendo escrito aqui.
+                Me chamo Mikael Antônio Ribeiro Krug, sou estudante de ADS (Análise e Desenvolvimento de Sistemas) pela universidade Cruzeiro Do Sul. Trabalho como programador no setor de desenvolvimento da empresa Orbe do Brasil e também sou baterista nas horas vagas.
             </p>
-            
+            <br>
             <figure class="image-container">
-                <img src="assets/impacto-da-ti-sercompe.jpg" alt="Primeira imagem do site">
+                <img src="assets/fotoperfil.png" alt="Primeira imagem do site">
             </figure>
         </div>
     </section>

@@ -6,7 +6,7 @@ body {
 
 /* Mantém a fonte padrão para o projeto */
 body, p, h1, h2, h3 {
-    font-family: "Open Sans", sans-serif;
+    font-family: "DM Sans", sans-serif;
     color: rgb(255, 255, 255);
 }
 
@@ -52,16 +52,19 @@ header {
 }
 
 .image-container img {
-    max-width: 100%;
+    max-width: 750px;
     height: auto;
+    width: 100%;
 }
 
 .text {
-    max-width: 800px; 
+    max-width: 750px; 
     margin: 0 auto;
-    padding: 0 1.5rem;
+    padding: 0 1rem;
     font-size: medium;
-    text-align: center;
+    text-align: justify;
+    text-indent: 3rem;
+    margin-bottom: 1rem;
 }
 
 /* --- Carrossel --- */
@@ -93,13 +96,34 @@ header {
     flex: 0 0 auto;
     width: 250px;
     height: 150px;
-    background-color: #202020;
-    color: white;
     border-radius: 8px;
+    position: relative; 
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.carousel-text {
+    font-weight: bold;
     font-size: 20px;
+    color: #ffffff;
+    z-index: 2; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); 
+}
+
+.carousel-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    z-index: 1; 
+}
+
+.scroll-item:hover .carousel-icon {
+    filter: brightness(1.2); 
 }
 
 .scroll-item.tab-active {
@@ -108,37 +132,52 @@ header {
     border-color: #ffffff;
 }
 
+.scroll-item.tab-active .carousel-text {
+    color: #000000;
+}
+
+.scroll-item.tab-active .carousel-icon {
+    filter: none;
+}
+
 .nav-btn {
+    position: absolute;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6);
     color: white;
     border: none;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
+    height: 151px;
+    width: 60px;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
     cursor: pointer;
     z-index: 10;
+    transition: background-color 0.2s ease;
 }
 
 .nav-btn:hover {
     background-color: rgba(0, 0, 0, 0.9);
 }
 
-.prev-btn { left: 10px; }
+.prev-btn { left: 0; }
 
-.next-btn { right: 10px; }
+.next-btn { right: 0; }
 
 /* --- Seções e Rodapé --- */
 .section-two {
-    background-color: #080808;
+    background-color: #0f0f0f;
     padding: 2rem 0;
 }
 
 .footer-text {
+    background: linear-gradient(#0f0f0f, #000000);
     font-size: smaller;
-    padding-top: 5rem;
-    padding-bottom: 1.5rem;
+    padding-top: 8rem;
+    padding-bottom: 1.9rem;
     margin: 0;
 }
