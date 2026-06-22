@@ -1,40 +1,67 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu html</title>
+    <title>Meu Site</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2=family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style/style.css" />
 </head>
+
 <body>
     <header>
-        <div>
-            <h1>
-                <p>
-                    Título do site
-                </p>
+        <div class="header-div">
+            <h1 class="header-text title">
+                { Título do site }
             </h1>
         </div>
     </header>
-    <br>
+
     <section>
-        <div>
-            <h1>
-                <p>
-                    Conteúdo do site
-                </p>
-            </h1>
+        <div class="carousel-wrapper">
+            <button class="nav-btn prev-btn" onclick="scrollCarousel(-1)">&#10094;</button>
+            <div class="scroll-container" id="carousel">
+                <div class="scroll-item">Item Um</div>
+                <div class="scroll-item">Item Dois</div>
+                <div class="scroll-item">Item Três</div>
+                <div class="scroll-item">Item Quatro</div>
+                <div class="scroll-item">Item Cinco</div>
+                <div class="scroll-item">Item Seis</div>
+                <div class="scroll-item">Item Sete</div>
+                <div class="scroll-item">Item Oito</div>
+                <div class="scroll-item">Item Nove</div>
+                <div class="scroll-item">Item Dez</div>
+                <div class="scroll-item">Item Onze</div>
+                <div class="scroll-item">Item Doze</div>
+            </div>
+            <button class="nav-btn next-btn" onclick="scrollCarousel(1)">&#10095;</button>
         </div>
     </section>
-    <br>
-    <section>
+
+    <section class="section-two">
         <div>
-            <h1>
-                <p>
-                    Conteúdo do site
-                </p>
-            </h1>
+            <h1 class="title-two">Conteúdo do site</h1>
+            
+            <p class="text">
+                Texto extremamente longo para fazer parecer que algo muito importante e inteligente está sendo escrito aqui.
+            </p>
+            
+            <figure class="image-container">
+                <img src="assets/impacto-da-ti-sercompe.jpg" alt="Primeira imagem do site">
+            </figure>
         </div>
     </section>
+
+    <footer>
+        <p class="footer-text">Projeto de autoria de Mikael Antônio Ribeiro Krug</p>
+    </footer>
+
     <script src="js/script.js"></script>
 </body>
+
 </html>
