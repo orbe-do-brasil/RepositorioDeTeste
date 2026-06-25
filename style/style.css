@@ -6,7 +6,7 @@ body {
 
 /* Mantém a fonte padrão para o projeto */
 body, p, h1, h2, h3 {
-    font-family: "DM Sans", sans-serif;
+    font: normal 25pt DM Sans;
     color: rgb(255, 255, 255);
 }
 
@@ -176,8 +176,8 @@ header {
 
 .footer-text {
     background: linear-gradient(#0f0f0f, #000000);
-    font-size: smaller;
+    font: normal 12pt Comic Sans;
     padding-top: 8rem;
-    padding-bottom: 1.9rem;
+    padding-bottom: 2rem;
     margin: 0;
 }
