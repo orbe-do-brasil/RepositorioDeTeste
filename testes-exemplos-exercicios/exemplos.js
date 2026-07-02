@@ -1,4 +1,5 @@
 // Variáveis
+// var, let ou const.
 
 var a = 0;
 
@@ -35,17 +36,9 @@ Aritméticos:
 "-" subtração
 "*" multiplicação
 "/" divisão (real)
-"%" resto da divisão (inteira)
+"%" resto da divisão (inteiro)
 "**" potência
-*/
-var a = 3 + 5
-var b = a / 2
-var c = b * a / 5
-var d = 1 + a ** 2
-var e = 25000 - c * d ** 2
-console.log((3 - 2)*(4 + 5) / 2)
 
-/*
 Atribuíção:
 
 "=" recebe
@@ -57,17 +50,29 @@ Atribuíção:
 "%=" equivalente à "n = n % número"
 "++" incremento
 "--" incremento
-*/
 
-/*
 Relacionais:
 
 ">" maior
 "<" menor
 ">=" maior ou igual
 "<=" menor ou igual
-"==" igual
-"!=" diferente
+"==" igual // Não testa o tipo
+"===" igual (operador de identidade) // Testa o tipo
+"!=" diferente // Não testa o tipo
+"!==" diferente (operador de identidade) // Testa o tipo
+
+Lógicos:
+
+"!" negação
+"&&" conjunção (e)
+"||" disjunção (ou)
+
+Ternário:
+
+"?"
+":"
+
 */
 
 // Alertas
@@ -123,18 +128,44 @@ var soma2 = nf1 + nf2
 alert("A soma dos valores é: " + soma2)
 */
 
-// Laços De Repetição
+// Estruturas De Repetição (Laços De Repetição)
+
+// Exemplo 2
 for(i=0; i<10; i++){
     a = 9*9/9
 }
 
 console.log("O resultado é: " + a);
 
+// Exemplo 2
 for(i=0; i<10; i++){
     console.log("Meu nome é: " + meuNome)
 }
 
 // Condicionais
+
+// Exemplo 3
+var velocidade = 60
+console.log(`A velocidade do seu carro é ${velocidade}km/h.`)
+
+if(velocidade > 60){ // Condição simples.
+    console.log("Você ultrapassou a velocidade permitida. MULTADO!")
+}
+
+// Exemplo 2
+var país = "Brasil"
+
+console.log(`Vivendo em ${país}`)
+
+if(país == "Brasil"){
+    console.log("Você é brasileiro!")
+} else{ // Condição composta.
+    console.log("Você é estrangeiro!")
+}
+
+// Exemplo 3
+console.log('Dirija sempre usando cinto de segurança!')
+
 if(confirm("Você está cadastrado?")){
     
 } else{
@@ -143,10 +174,69 @@ if(confirm("Você está cadastrado?")){
     alert("Seja bem vindo " + nome + "!")
 }
 
+// Exemplo 4
 if(confirm("Você está cadastrado?")){
     let nome = prompt("Qual seu nome?")
 
     alert("Seja bem vindo " + nome + "!")
 }else{
 
+}
+
+// Exemplo 5
+var idade = 12
+
+console.log(`Você tem ${idade} anos.`)
+
+if(idade < 16){
+    console.log('Não vota')
+} else if(idade < 18 || idade > 65){
+    console.log('Voto opcional')
+} else{
+    console.log('Voto obrigatório')
+}
+
+// Exemplo 6
+var agora = new Date()
+var hora = agora.getHours()
+
+console.log(`Agora são exatamente ${hora} horas.`)
+
+if(hora < 12){
+    console.log("Bom dia!")
+} else if(hora <= 18){
+    console.log("Boa tarde!")
+} else{
+    console.log("Boa noite!")
+}
+
+// Exemplo 7
+var agora = new Date()
+var diaDaSemana = agora.getDay()
+
+switch(diaDaSemana){
+    case 0:
+        console.log('Domingo')
+        break
+    case 1: 
+        console.log('Segunda-feira')
+        break
+    case 2: 
+        console.log('Terça-feira')
+        break
+    case 3: 
+        console.log('Quarta-feira')
+        break
+    case 4: 
+        console.log('Quinta-feira')
+        break
+    case 5: 
+        console.log('Sexta-feira')
+        break
+    case 6: 
+        console.log('Sábado')
+        break
+    default:
+        console.log('[ERRO] Dia inválido!')
+        break
 }

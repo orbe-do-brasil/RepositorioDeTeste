@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercício 1</title>
+    <style>
+        body{
+            background: rgb(67, 141, 252);
+            font: normal 12pt Arial;
+        }
+
+        header{
+            color: white;
+            text-align: center;
+        }
+
+        section{
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            width: 500px;
+            margin: auto;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.397);
+        }
+
+        footer{
+            color: white;
+            text-align: center;
+            font-style: italic;
+        }
+
+        div{
+            text-align: center;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body onload="carregar()">
+    <header>
+        <h1>
+            Hora Do Dia
+        </h1>
+    </header>
+    <section>
+        <div id="msg">
+            Aqui vai aparecer a mensagem...
+        </div>
+        <div id="frame">
+            <img id="img" src="manha.jpg" alt="Foto do dia">
+        </div>
+    </section>
+    <footer>
+        <p>
+            &copy; Rodapé
+        </p>
+    </footer>
+    <script>
+        function carregar(){
+            var msg = document.getElementById('msg')
+            var img = document.getElementById('img')
+            var data = new Date()
+            var hora = data.getHours()
+            msg.innerHTML = `Agora são ${hora} horas.`
+
+            if (hora >= 0 && hora < 12){
+                // Bom dia!
+                img.src = '../assets/manha.jpg'
+                document.body.style.background = '#e2cd9f'
+            } else if(hora >= 12 && hora <= 18){
+                // Boa tarde!
+                img.src = '../assets/tarde.jpg'
+                document.body.style.background = '#b9846f'
+            } else{
+                // Boa noite!
+                img.src = '../assets/noite.jpg'
+                document.body.style.background = '#515154'
+            }
+        }
+        
+    </script>
+</body>
+</html>

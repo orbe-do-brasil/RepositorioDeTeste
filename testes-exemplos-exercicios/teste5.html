@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Teste 5</title>
+</head>
+<body>
+    <h1>
+        Faixa Etária
+    </h1>
+    Qual a sua idade? <input type="number" name="idadeTxt" id="idadeTxt">
+    <input type="button" value="Clique aqui" onclick="Validação()">
+    <div id="resultadoTxt">
+
+    </div>
+
+    <script>
+        function Validação(){
+            var inputIdade = document.getElementById("idadeTxt")
+            var idade = Number(inputIdade.value)
+            var resultado = document.getElementById("resultadoTxt")
+
+            if(idade < 18){
+                resultado.innerHTML = "<p> Menor de idade. </p>"
+            }else{
+                resultado.innerHTML = "<p> Maior de idade. </p>"
+        }
+    }
+    </script>
+</body>
+</html>

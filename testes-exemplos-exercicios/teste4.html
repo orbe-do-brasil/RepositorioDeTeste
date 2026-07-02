@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Teste 4</title>
+</head>
+<body>
+    <h1>Teste De Nacionalidade</h1>
+    De qual país você é? <input type="text" name="nacionalidadetxt" id="nacionalidadetxt">
+    <input type="button" value="Validar" onclick="Verificação()">
+    <div id="resultadotxt">
+
+    </div>
+    
+    <script>
+        function Verificação(){
+            var inputNacionalidade = document.getElementById("nacionalidadetxt")
+            var resultado = document.getElementById("resultadotxt")
+            var nacionalidade = inputNacionalidade.value
+
+            if(nacionalidade === "Brasil" || nacionalidade === "BR" || nacionalidade === "brasil" || nacionalidade === "br" || nacionalidade === "Brazil" || nacionalidade === "brazil"){
+                resultado.innerHTML = `<p> Você é brasileiro! </p>`
+            } else{
+                resultado.innerHTML = `<p> Você é estrangeiro! </p>`
+            }
+        }
+    </script>
+</body>
+</html>
